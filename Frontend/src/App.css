@@ -1,0 +1,34 @@
+body {
+  background-image: url("./assets/library_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: lightblue;
+}
+
+/* .navbar-brand {
+  margin-right: auto;
+} */
+
+/* .ml-auto {
+  margin-left: auto;
+} */
+/* .Home-container {
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 25px;
+  height: 350px;
+  margin-right: 150px;
+  margin-left: 150px;
+  margin-top: 20%;
+} */
+.text {
+  color: white;
+}
+.buttonContainer {
+  padding: 20px;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
