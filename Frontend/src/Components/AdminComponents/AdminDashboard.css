@@ -1,6 +1,38 @@
-h1{
-    font-size: 45px;
+h1 {
+  font-size: 45px;
 }
-.UserDatacontainer{
-    width: 100%;
+.UserDatacontainer {
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navButton {
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: orange;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.navButton:hover {
+  background-color: yellowgreen;
+}
+
+.backButton {
+  padding: 10px 20px;
+  background-color: lightcoral;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+.backButton:hover {
+  background-color: #c82333;
 }

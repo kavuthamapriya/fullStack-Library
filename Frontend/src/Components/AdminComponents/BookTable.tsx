@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import '../AdminComponents/BookTable.css'
+import "../AdminComponents/BookTable.css";
 
 interface Book {
   ID: number;

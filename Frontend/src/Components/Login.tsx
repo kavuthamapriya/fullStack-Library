@@ -63,7 +63,7 @@ const Login: React.FC = () => {
           <Form.Label>Role:</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Enter role"
+            placeholder="Enter the role user or admin"
             value={role}
             onChange={(e) => setRole(e.target.value)}
           />
@@ -74,7 +74,7 @@ const Login: React.FC = () => {
         </Button>
       </Form>
     </div>
-  );
+  ); 
 };
 
 export default Login;

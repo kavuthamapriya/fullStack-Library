@@ -73,7 +73,7 @@ export const signIn = async (req: Request, res: Response) => {
 
     // const token = jwt.sign({ userId: user.ID }, "SECRET_KEY", { expiresIn: '1h' });
     const token = generateToken(user);
-     return res.status(200).json(token);
+    return res.status(200).json(token);
   } catch (error) {
     console.error("Error signing in:", error);
     return res.status(500).json({ message: "Error signing in", error });
@@ -84,7 +84,7 @@ export const viewBooks = async (req: Request, res: Response) => {
   try {
     const bookRepository = AppDataSource.getRepository(Book);
     const books = await bookRepository.find();
-   return res.status(200).json(books);
+    return res.status(200).json(books);
   } catch (error) {
     console.error("Error fetching books:", error);
     return res.status(500).json({ message: "Books not found" });
@@ -120,10 +120,10 @@ export const borrowBook = async (req: Request, res: Response) => {
       enddate: enddate,
     });
     await userBookRepository.save(newUserBook);
-   return res.status(201).json({ message: "Book borrowed successfully" });
+    return res.status(201).json({ message: "Book borrowed successfully" });
   } catch (error) {
     console.error("Error borrowing book:", error);
-   return res.status(500).json({ message: "Internal server error" });
+    return res.status(500).json({ message: "Internal server error" });
   }
 };
 
@@ -131,9 +131,11 @@ export const viewBorrowedBooks = async (req: Request, res: Response) => {
   try {
     // const { UBID } = req.body;
     const userBookRepository = AppDataSource.getRepository(UserBook);
-    const userBooks = await userBookRepository.find({relations:['username','bookname']});
+    const userBooks = await userBookRepository.find({
+      relations: ["username", "bookname"],
+    });
     // {where: { UBID: UBID }}
-   return res.status(201).json(userBooks);
+    return res.status(201).json(userBooks);
   } catch (error) {
     console.error("Error borrowed books:", error);
     return res.status(500).json({ message: "Internal server error" });
